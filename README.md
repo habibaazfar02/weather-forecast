@@ -1,110 +1,139 @@
-#  Palindrome Checker using Pushdown Automaton (PDA)
+# Weather Forecasting Website
 
-## Project Overview
 
-This project is a **Palindrome Checker** implemented using the concept of a **Pushdown Automaton (PDA)**. The application is built with **Flask (Python web framework)** and demonstrates how a PDA uses a **stack** to verify whether a given string is a palindrome.
+## Live Website
 
-The project is developed as part of an **Automata Theory** course to practically implement PDA behavior.
+ **[https://sukaina.pythonanywhere.com/login](https://sukaina.pythonanywhere.com/login)**
+
+---
+
+##  Project Description
+
+The **Weather Forecasting Website** is a web-based application that provides **real-time weather updates**, forecasts, and personalized alerts through a **simple and user-friendly interface**.
+The system allows users to search weather by city, track multiple locations, and receive alerts based on specific weather conditions.
+
+This project applies **software engineering principles**, **design patterns**, and **real-time API integration** as part of a Final Year Project.
 
 ---
 
-## Objective
+##  Problem Statement
 
-* To understand and implement **Pushdown Automaton (PDA)** concepts
-* To check whether a string is a **palindrome** using stack operations
-* To apply automata theory concepts in a **real-world web application**
+Most existing weather applications:
+
+* Are complex and difficult to use
+* Lack personalization
+* Do not support multi-city tracking
+* Do not provide user-defined weather alerts
+
+Users need a **simple, customizable, and reliable** platform for weather forecasting.
 
 ---
+
+##  Solution
+
+This project solves the problem by offering:
+
+* Real-time weather data using reliable APIs
+* Personalized dashboards
+* Multi-city weather tracking
+* Custom alerts for temperature, rain, wind, and storms
+* Clean and responsive UI
+
 
 ## Features
 
-* Web-based interface using **Flask**
-* PDA-based palindrome validation
-* Uses **stack push and pop operations**
-* Rejects strings shorter than **8 characters**
-* Handles **even and odd length strings**
-* Displays **Accepted / Rejected** messages with reasons
+* User signup and login
+* City-based weather search
+* Real-time weather conditions
+* 7-day weather forecast
+* Save and manage favorite cities
+* Personalized weather alerts
+* Email / dashboard notifications
+* Responsive design (desktop & mobile)
+
+## Design Patterns Used
+
+###  Factory Method Pattern
+
+* Used to create weather data objects
+* Allows switching between multiple weather APIs
+* Improves flexibility and scalability
+
+###  Observer Pattern
+
+* Used for weather alerts
+* Users subscribe to weather updates
+* Notifications are sent automatically when conditions change
+
+###  Facade Pattern
+
+* Simplifies complex backend operations
+* Hides API calls, data processing, and alert logic behind a simple interface
+
+### Related Pattern Diagrams:-
+<img width="1380" height="774" alt="image" src="https://github.com/user-attachments/assets/80c83e9b-c193-4eca-816c-695249c83aac" />
+<img width="1131" height="766" alt="image" src="https://github.com/user-attachments/assets/affb9143-0eb1-46c9-8041-2bd8fdd4e4ab" />
+
+
+##  System Architecture
+
+* **Architecture:** MVC (Model–View–Controller)
+* **Frontend:** HTML, CSS, Bootstrap
+* **Backend:** Flask (Python)
+* **Database:** MySQL
+* **APIs:** OpenWeather API / WeatherAPI
+* **Notifications:** Email & dashboard alerts
 
 ---
 
-## How PDA Logic Works
+##  Technologies Used
 
-1. The input string is divided into two halves.
-2. The **first half** of the string is pushed onto a stack.
-3. If the string length is odd, the middle character is skipped.
-4. The **second half** is compared with stack elements by popping.
-5. If all characters match and the stack is empty → **Accepted**
-6. Otherwise → **Rejected**
+### Languages & Frameworks
 
-This simulates a **Pushdown Automaton** using a stack.
+* Python
+* Flask
+* HTML, CSS, Bootstrap
 
----
+### Libraries & Tools
 
-## Technologies Used
-
-* **Python**
-* **Flask**
-* **HTML (for frontend)**
-* **Pushdown Automaton (PDA) concept**
-* **Stack Data Structure**
+* Requests
+* SQLAlchemy
+* Chart.js
+* Flask-Mail / SMTP
+* Weather API SDKs
 
 ---
 
-## Project Structure
+## How It Works
 
-```
-Palindrome-PDA/
-│
-├── app.py
-├── templates/
-│   └── index.html
-└── README.md
-```
+1. User logs in or registers
+2. Enters a city name
+3. System fetches live weather data
+4. Weather details and forecast are displayed
+5. Alerts are triggered if user-defined conditions are met
 
----
+##  Future Enhancements
 
-## How to Run the Project
-
-1. Install Flask:
-
-```bash
-pip install flask
-```
-
-2. Run the application:
-
-```bash
-python app.py
-```
-
-3. Open your browser and go to:
-
-```
-http://127.0.0.1:5000/
-```
+* Mobile application
+* AI-based weather prediction
+* Push notifications
+* Improved UI/UX
+* Performance optimization
 
 ---
 
-## Example
+## References
 
-**Input:**
-
-```
-abccbaab
-```
-
-**Output:**
-
-```
-Accepted: This string is a palindrome according to PDA rules.
-```
+* OpenWeather API Documentation
+* WeatherAPI Developer Docs
+* *Design Patterns: Elements of Reusable Object-Oriented Software*
+* Flask Official Documentation
+* MDN Web Docs & W3Schools
 
 ---
 
-## Automata Theory Concepts Used
+## Conclusion
 
-* Pushdown Automaton (PDA)
-* Stack operations
-* Palindrome language recognition
-* Deterministic behavior simulation
+The **Weather Forecasting Website** successfully delivers a **simple, accurate, and personalized weather forecasting solution**.
+
 
